@@ -34,6 +34,16 @@ class AccountsController < ApplicationController
     end
     
     def login
+        @account = Account.where("username= ? ", params[:username]).take
+        if !@account.nil?
+            if @account.password == params[:field2]
+                redirect_to account_translations_path(@account.id)
+            else
+                redirect_to controller: 'welcome', action: 'index', error: 'Incorrect Password'
+            end
+        else
+            redirect_to controller: 'welcome', action: 'index', error: 'Incorrect Username'
+        end
     end
 end
 

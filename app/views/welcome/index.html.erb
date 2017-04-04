@@ -7,11 +7,19 @@
         <p>This workspace allows you to translate text between different languages and compile your translations into projects. You can also join a group to share your translations with others. Create an account to get started! </p><br>
     </div>
     <div id="nav">
-        <%= link_to(login_accounts_path) do %>
             <div class="button" id="loginbutton">
-                <h2>Login</h2>
+                <% if !@error.nil? %>
+                    <%= @error.inspect %>
+                <% end %>
+                <%= form_tag :action=>'login', :controller=>'accounts' do %>
+                    <h2>Login</h2>
+                    <%= text_field_tag "username" %>
+                    <h2>Password</h2>
+                    <%= password_field_tag "field2" %>
+                    <%= submit_tag "Login" %>
+                <% end %>
+                
             </div>
-        <% end %>
         <%= link_to(new_account_path) do %>
             <div class="button" id="signupbutton">
                 <h2>Sign-up</h2>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :translations
     
     collection do
-     get :login
+     post :login
    end
   end
 
