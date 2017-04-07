@@ -1,32 +1,22 @@
-<body>
-<div id="container">
-    <div id="header">
-        <h1>Welcome to Translation Workspace</h1>
-    </div>
-      <div id="description">
-        <p>This workspace allows you to translate text between different languages and compile your translations into projects. You can also join a group to share your translations with others. Create an account to get started! </p><br>
-    </div>
-    <div id="nav">
-            <div class="button" id="loginbutton">
-                <% if !@error.nil? %>
-                    <%= @error.inspect %>
-                <% end %>
-                <%= form_tag :action=>'login', :controller=>'accounts' do %>
-                    <h2>Login</h2>
-                    <%= text_field_tag "username" %>
-                    <h2>Password</h2>
-                    <%= password_field_tag "field2" %>
-                    <%= submit_tag "Login" %>
-                <% end %>
-                
-            </div>
-        <%= link_to(new_account_path) do %>
-            <div class="button" id="signupbutton">
-                <h2>Sign-up</h2>
-            </div>
+<h1>Welcome to Translation Workspace</h1>
+<div class="layout">
+    <div class="login">
+        <% if !@error.nil? %>
+            <%= @error.inspect %>
+        <% end %>
+        <%= form_tag :action=>'login', :controller=>'accounts' do %>
+            <h2>Login</h2>
+            <%= text_field_tag "username" %>
+            <h2>Password</h2>
+            <%= password_field_tag "field2" %>
+            <%= submit_tag "Login" %>
         <% end %>
     </div>
+    <%= link_to new_account_path do %>
+        <div class="signup">
+            <h3>Sign Up</h3>
+            <p>This workspace creates a complete storge for your translations and stores them into
+             a convienent database for you to view at anytime. Create an account to get started!</p>
+        </div>
+    <% end %>
 </div>
- 
-</body>
-

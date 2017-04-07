@@ -1,7 +1,4 @@
 class AccountsController < ApplicationController
-    def index
-    end
-    
     def show
         @account = Account.find(params[:id])
     end
@@ -14,7 +11,7 @@ class AccountsController < ApplicationController
         @account = Account.new(account_params)
         
         if @account.save
-            redirect_to @account
+            redirect_to account_translations_path(@account.id)
         else
             render 'new'
         end
@@ -33,16 +30,26 @@ class AccountsController < ApplicationController
         end
     end
     
+    def destroy
+        @account = Account.find(params[:id])
+        @translations = Translation.where("account_id = ? ", @account.id)
+        
+        @account.destroy
+        @translations.destroy_all
+        
+        redirect_to controller: 'welcome'
+    end
+    
     def login
         @account = Account.where("username= ? ", params[:username]).take
         if !@account.nil?
             if @account.password == params[:field2]
                 redirect_to account_translations_path(@account.id)
             else
-                redirect_to controller: 'welcome', action: 'index', error: 'Incorrect Password'
+                redirect_to controller: 'welcome', error: 'Incorrect Password'
             end
         else
-            redirect_to controller: 'welcome', action: 'index', error: 'Incorrect Username'
+            redirect_to controller: 'welcome', error: 'Incorrect Username'
         end
     end
 end

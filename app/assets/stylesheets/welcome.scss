@@ -3,6 +3,93 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+	background: #003f87;
+	font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Lora', serif;
+	
+}
+h1{
+	font-size:40px;
+	color:#fff;
+	margin:65px 0px;
+	text-align:center;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+}
+
+.layout{
+	width:62%;
+	margin:0 auto;
+}
+.login,.signup {
+    float: left;
+	background:#fff;
+	padding:75px;
+	transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+	height:280px;
+}
+.login{
+    width: 30%;
+}
+.signup {
+    width: 29%;
+}
+
+.login h2{
+  font-size:25px;
+	color:#000;
+	text-align: left;
+	letter-spacing: 2px;
+  
+}
+
+.signup h3{
+	font-size:25px;
+	color:#000;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.signup {
+    background: url(http://il2.picdn.net/shutterstock/videos/20680192/thumb/1.jpg)no-repeat;
+    background-size: cover;
+    
+}
+.signup h3{
+	color:#fff;
+}
+.signup p{
+	color:#fff;
+	font-size:14px;
+	line-height:30px;
+	text-align:center;
+}
+
+.signup h6{
+    text-align: center;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: .5px;
+    margin: 37.5px 0px 20px;
+    color: #ebebeb;
+	text-decoration:none;
+}
+.signup h6 a {
+	text-decoration:none;
+	color: #ebebeb;
+}
+.signup h6 a:hover {
+	text-decoration:none;
+	color:#fd9f3e;
+}
+
+
+/*body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: lightblue;
 }
@@ -75,5 +162,7 @@ div.button:active {
   border-bottom: 1px solid #CCCCCC;
   border-left: 1px solid #333333;
 	background-color: #808080;
-}
+} 
+
+*/
 

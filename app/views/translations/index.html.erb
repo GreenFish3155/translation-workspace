@@ -1,1 +1,10 @@
 Welcome, <%= @account.first_name %> <%= @account.last_name %>
+<%= link_to account_path(:id=>@account.id) do %>
+    Account
+<% end %>
+<%= link_to welcome_index_path do %>
+    Log Out
+<% end %>
+<%= link_to new_account_translation_path do %>
+    New Translation
+<% end %>

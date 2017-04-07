@@ -1,17 +1,23 @@
-<h1>It worked, remember to fix this btw</h1>
-<p>
-    firstname:
+<h1>Your Account</h1>
+<div class="accountinfo">
+    <h2>Username:
+    <%= @account.username %></h2>
+    <h2>First Name:
     <%= @account.first_name %>
-</p>
-<p>
-    lastname:
-    <%= @account.last_name %>
-</p>
-<p>
-    username:
-    <%= @account.username %>
-</p>
-<p>
-    password:
-    <%= @account.password %>
-</p>
+    </h2>
+    <h2>Last Name:
+    <%= @account.last_name %></h2>
+</div>
+
+<%= link_to edit_account_path do %>
+    <h2>Edit Profile</h2>
+<% end %>
+
+<%= link_to 'Delete',
+    account_path(@account),
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
+
+<%= link_to account_translations_path(@account.id) do %>
+    <h2>Back</h2>
+<% end %>
