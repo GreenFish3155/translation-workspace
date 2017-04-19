@@ -1,3 +1,55 @@
 // Place all the styles related to the Accounts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.layout{
+	width:62%;
+	margin:0 auto;
+}
+
+.login{
+    float: left;
+	background:#fff;
+	padding:75px;
+	transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+	height:280px;
+}
+.login{
+    width: 30%;
+}
+
+.signup_form p{
+	color:#fff;
+	font-size:14px;
+	line-height:30px;
+	text-align:center;
+}
+.accountinfo{
+	font-size:30;
+	color:#fff;
+	text-align:lef;
+	margin:65px 0px;
+}
+
+.editAccount{
+	a:visited {
+    color: white;
+}
+	a:hover {
+    color:#8cff66;
+}
+}
+.cancel{
+		a:visited {
+    color: white;
+}
+	a:hover {
+    color:#8cff66;
+}
+}

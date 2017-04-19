@@ -1,6 +1,6 @@
-<h1>Create Translation</h1>
+<h1>Edit Translation</h1>
 <div class="container">
-    <%= form_for :translation, :url => {:action => "create"}, :translation => @translation do |f| %>
+    <%= form_for :translation, :url => {:action => "update"}, :translation => @translation, :method => 'PATCH' do |f| %>
         <%= render :partial=>'form', :locals=>{:f=>f} %>
     <% end %>
     

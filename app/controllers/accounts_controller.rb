@@ -46,10 +46,10 @@ class AccountsController < ApplicationController
             if @account.password == params[:field2]
                 redirect_to account_translations_path(@account.id)
             else
-                redirect_to controller: 'welcome', error: 'Incorrect Password'
+                redirect_to controller: 'welcome', error: 'Incorrect Username or Password'
             end
         else
-            redirect_to controller: 'welcome', error: 'Incorrect Username'
+            redirect_to controller: 'welcome', error: 'Incorrect Username or Password'
         end
     end
 end

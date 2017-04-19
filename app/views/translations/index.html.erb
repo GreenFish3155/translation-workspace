@@ -1,10 +1,43 @@
-Welcome, <%= @account.first_name %> <%= @account.last_name %>
-<%= link_to account_path(:id=>@account.id) do %>
-    Account
-<% end %>
-<%= link_to welcome_index_path do %>
-    Log Out
-<% end %>
-<%= link_to new_account_translation_path do %>
-    New Translation
-<% end %>
+<div class="container">
+    <div class ="headings">
+        <h1>Welcome, <%= @account.first_name %> <%= @account.last_name %></h1>
+    </div>
+    <div class ="link1">
+    <%= link_to account_path(:id=>@account.id) do %>
+        Account
+    <% end %>
+    </div>
+    <div class ="link2">
+    <%= link_to welcome_index_path do %>
+        Log Out
+    <% end %>
+    </div>
+    
+    <div class ="link3">
+    <%= link_to new_account_translation_path do %>
+        New Translation
+    <% end %>
+    </div>
+    <div class="tableStyle">
+    <table>
+        <tr>
+            <th>Project Name</th>
+            <th>Source Language</th>
+            <th>Target Language</th>
+        </tr>
+        </div>
+        <% @translations.each do |translation| %>
+            <tr>
+                <td><%= translation.project_name %></td>
+                <td><%= translation.source_language %></td>
+                <td><%= translation.target_language %></td>
+                <td><div class="showLink"><%= link_to 'Show', account_translation_path(@account.id, translation.id) %></div></td>
+                <td><div class="showLink2"><%= link_to 'Edit', edit_account_translation_path(@account.id, translation.id) %></div></td>
+                <td><div class="showLink3"><%= link_to 'Delete', account_translation_path(@account.id, translation.id), method: :delete, data: {confirm: 'Are you sure' } %></div></td>
+            
+            </tr>
+           
+        <% end %>
+        
+    </table>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="name">
+        <h1><%= @translation.project_name %></h1>
+    </div>
+    <div class="translation">
+        <h2><%= @translation.source_language %></h2>
+        <p>
+            <%= simple_format(@translation.source_text) %>
+        </p>
+        <h2><%= @translation.target_language %></h2>
+        <p>
+            <%= simple_format(@translation.target_text) %>
+        </p>
+    </div>
+    <div class="backbutton">
+        <%= link_to 'Back', account_translations_path(@account.id) %>
+    </div>
+</div>
