@@ -1,5 +1,5 @@
-<h1>Your Account</h1>
 <div class="container">
+    <h1>Your Account</h1>
     <div class="accountinfo">
         <h2>Username:
         <%= @account.username %></h2>
@@ -13,12 +13,12 @@
     <%= link_to edit_account_path do %>
         Edit Profile
     <% end %>
-    
+    <br /><br />
     <%= link_to 'Delete',
         account_path(@account),
         method: :delete,
         data: { confirm: 'Are you sure?' } %>
-    
+    <br /><br />
     <%= link_to account_translations_path(@account.id) do %>
         Back
     <% end %>

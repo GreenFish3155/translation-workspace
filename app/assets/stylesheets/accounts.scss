@@ -9,6 +9,14 @@
 	margin:0 auto;
 }
 
+h1{
+	font-size:40px;
+	color:#000;
+	text-align:center;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+}
+
 .login{
     float: left;
 	background:#fff;
@@ -24,32 +32,51 @@
     width: 30%;
 }
 
+.signup_form {
+
+	color:#fff;
+	font-size:14px;
+	line-height:20px;
+	text-align:center;
+}
+
+.signup_form {
+    width: 100%;
+}
+
+.signup_form ul {
+	color:#fff;
+	font-size:14px;
+	line-height:30px;
+	text-align:center;
+}
+
 .signup_form p{
 	color:#fff;
 	font-size:14px;
 	line-height:30px;
 	text-align:center;
 }
-.accountinfo{
-	font-size:30;
+
+.cancel p{
 	color:#fff;
-	text-align:lef;
-	margin:65px 0px;
+	font-size:14px;
+	line-height:30px;
+	text-align:center;
 }
 
-.editAccount{
-	a:visited {
-    color: white;
+#header h1 {
+	color:#fff;
+	font-size:40px;
+	text-align:center;
+	letter-spacing: 2px;
+	text-transform: capitalize;
 }
-	a:hover {
-    color:#8cff66;
+
+.error_explanation h2{
+	color:#fff;
+	font-size:24px;
+	line-height:30px;
+	text-align:center;
 }
-}
-.cancel{
-		a:visited {
-    color: white;
-}
-	a:hover {
-    color:#8cff66;
-}
-}
+	

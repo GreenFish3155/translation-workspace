@@ -3,19 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
-.headings{
-	font-size:50px;
-	color:#fff;
-	text-align:center;
-	margin:65px 0px;
-}
-
-
-
 .link1{
 	font-size:30px;
-	color:#fff;
 	text-align:right;
 	margin:65px 0px;
 	position: relative;
@@ -23,23 +12,22 @@
 }
 
 a {
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 
 a:visited {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
 a:hover {
-    color:#8cff66;
+    color:blue;
     text-decoration: none;
 }
 
 .link2{
 	font-size:30px;
-	color:#fff;
 	text-align:right;
 	margin:65px 0px;
 	position: relative;
@@ -50,7 +38,6 @@ a:hover {
 
 .link3{
 	font-size:30px;
-	color:#fff;
 	text-align:left;
 	margin:65px 0px;
 	position: relative;
@@ -59,14 +46,12 @@ a:hover {
 }
 .tableStyle{
 	font-size:20px;
-	color:#fff;
 	margin-left:auto; 
     margin-right:auto;
 }
 	
 .translation{
 	font-size:15px;
-	color:#fff;
 	text-align:left;
 	
 }
@@ -74,7 +59,11 @@ a:hover {
 .container {
 	width: 75%;
 	margin: auto;
-	color: white;
+	color: black;
+	background-color: white;
+	margin-top: 25px;
+	padding: 25px 75px 75px 75px;
+	border-radius: 25px;
 }
 
 table {

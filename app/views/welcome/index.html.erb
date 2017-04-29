@@ -1,4 +1,4 @@
-<h1>Welcome to Translation Workspace</h1>
+<h1 id="main">Welcome to Translation Workspace</h1>
 <div class="layout">
     <div class="login">
         <% if !@error.nil? %>
@@ -12,7 +12,7 @@
             <%= submit_tag "Login" %>
         <% end %>
     </div>
-    <%= link_to new_account_path do %>
+    <%= link_to new_account_path, id:"signup" do %>
         <div class="signup">
             <h3>Sign Up</h3>
             <p>This workspace creates a complete storge for your translations and stores them into

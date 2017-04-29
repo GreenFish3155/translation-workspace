@@ -1,10 +1,10 @@
-<h1>Edit Translation</h1>
 <div class="container">
+    <h1>Edit Translation</h1>
     <%= form_for :translation, :url => {:action => "update"}, :translation => @translation, :method => 'PATCH' do |f| %>
         <%= render :partial=>'form', :locals=>{:f=>f} %>
     <% end %>
     
     <%= link_to account_translations_path(@account.id) do %>
-        Cancel
+        <p>Cancel</p>
     <% end %>
 </div>

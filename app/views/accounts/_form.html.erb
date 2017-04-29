@@ -1,20 +1,20 @@
 
-
+<div class="signup_form">
 <%= form_for @account do |f| %>
             
             <% if @account.errors.any? %>
-                <div id="error_explanation">
+                
                     <h2>
                         <%= pluralize(@account.errors.count, "error") %> need to be resolved:
                   </h2>
                   <ul>
                     <% @account.errors.full_messages.each do |msg| %>
-                      <li><%= msg %></li>
+                      <%= msg %><br>
                     <% end %>
                   </ul>
-                </div>
+                
             <% end %>
-            <div class="signup_form">
+            
             <p>
                 <%= f.label :username %><br>
                 <%= f.text_field :username %>
