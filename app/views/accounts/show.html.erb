@@ -11,10 +11,10 @@
     </div>
     <div class="editAccount">
     <%= link_to edit_account_path do %>
-        Edit Profile
+        Edit Account
     <% end %>
     <br /><br />
-    <%= link_to 'Delete',
+    <%= link_to 'Delete Account',
         account_path(@account),
         method: :delete,
         data: { confirm: 'Are you sure?' } %>
